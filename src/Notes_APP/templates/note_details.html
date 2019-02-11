@@ -1,0 +1,34 @@
+{% extends "notes.html" %}
+{% load static %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <title> Notes </title>
+  </head>
+  <body>
+    <hr>
+    <a href="{% url 'note_edit' note_details.slug  %}">Edit Note</a>
+    <hr>
+      <h1> {{note_details}} </h1>
+      <h3> {{note_details.content}} </h3>
+      <h4> {{note_details.created}} </h4>
+      <h4> {{note_details.active}} </h4>
+      <h4> {{note_details.tags}} </h4>
+  </body>
+</html>
+{%endblock%}
+
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <title> Notes </title>
+  </head>
+  <body>
+  </body>
+</html>
+-->

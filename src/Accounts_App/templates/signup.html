@@ -1,0 +1,25 @@
+{% extends "notes.html" %}
+{% load static %}
+{% block body %}
+<div class="row">
+    <div class="add_form">
+        <form method ='post' action="{% url 'register_backend' %}">
+            {% csrf_token %}
+            <br>
+            <br>
+            <br>
+            <label>First Name</label><br>
+            <input type="text" name="first_name"><br>
+            <label>Last Name</label><br>
+            <input type="text" name="last_name"><br>
+            <label>User Name</label><br>
+            <input type="text" name="username"><br>
+            <label>Email</label><br>
+            <input type="email" name="email"><br>
+            <label>Password</label><br>
+            <input type="password" name="password"><br>
+            <input type="submit" value="Register Now">
+        </form>
+    </div>
+</div>
+{%endblock%}

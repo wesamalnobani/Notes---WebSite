@@ -1,0 +1,26 @@
+{% extends "notes.html" %}
+{% load static %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <title> Notes </title>
+  </head>
+  <body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% csrf_token %}
+welcome {{profile}}
+<a href='{% url 'logout_user' %}'>Log Out</a>
+  </body>
+</html>
+{%endblock%}

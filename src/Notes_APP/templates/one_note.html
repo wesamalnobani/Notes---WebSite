@@ -1,0 +1,31 @@
+{%extends 'notes.html'%}
+{% load static %}
+
+{% block body %}
+<!-- Start blog Area -->
+<section class="blog-area section-gap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 pb-30 header-text">
+                <h1>
+                    {{note_details}}
+                </h1>
+                <p>
+                    {{note_details.user.username}} | {{note_details.tags}} | {{note_details.created|date:"j M" }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="single-blog col-lg-10 col-md-10">
+                {% if note_details.image %}
+                <img class="f-img img-fluid mx-auto" src="{{note_details.image.url}}" alt="">
+                {%endif%}
+                <p>
+                    {{note_details.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end blog Area -->
+{%endblock%}
